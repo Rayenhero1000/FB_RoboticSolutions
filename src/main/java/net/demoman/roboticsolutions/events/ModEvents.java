@@ -7,13 +7,13 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 
 @Mod.EventBusSubscriber(modid = RoboticSolutions.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ModEvents {
-    //Register stuff like entity attributes here
+    // Register stuff like entity attributes here
 
     public static void setup(IEventBus eventBus) {
-
     }
 
     public static void init(FMLCommonSetupEvent event) {
 
     }
+
 }

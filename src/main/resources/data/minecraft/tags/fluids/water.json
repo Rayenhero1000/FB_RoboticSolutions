@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "roboticsolutions:memory_juice_flowing",
+    "roboticsolutions:memory_juice_fluid"
+  ]
+}

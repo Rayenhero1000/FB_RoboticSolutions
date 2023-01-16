@@ -1,7 +1,11 @@
 package net.demoman.roboticsolutions;
 
+import net.demoman.roboticsolutions.core.ModRegistration;
+import net.demoman.roboticsolutions.core.fluid.ModFluids;
 import net.demoman.roboticsolutions.events.ClientEvents;
 import net.demoman.roboticsolutions.events.ModEvents;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -17,15 +21,16 @@ public class RoboticSolutions
 {
     public static final String MODID = "roboticsolutions";
     // Directly reference a log4j logger.
-    private static final Logger LOGGER = LogManager.getLogger();
+    public static final Logger LOGGER = LogManager.getLogger();
 
     public RoboticSolutions() {
         // Register the setup method for modloading
-        //Use an IEventBus variable to simplify code/make it easier to read
+        // Use an IEventBus variable to simplify code/make it easier to read
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModRegistration.init(eventBus);
         ModEvents.setup(eventBus);
+        ModFluids.register(eventBus);
 
         eventBus.addListener(ModEvents::init);
         DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> eventBus.addListener(ClientEvents::init));
