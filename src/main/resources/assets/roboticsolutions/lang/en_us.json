@@ -1,4 +1,5 @@
 {
   "item.roboticsolutions.memory_juice_bucket": "Memory Juice Bucket",
-  "fluid.roboticsolutions.memory_juice": "Memory Juice"
+  "fluid.roboticsolutions.memory_juice": "Memory Juice",
+  "itemGroup.roboticSolutionsTab": "Robotic Solutions"
 }

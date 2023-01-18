@@ -17,12 +17,14 @@ import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
+import static net.demoman.roboticsolutions.core.ModItemGroup.ROBOTIC_SOLUTIONS_GROUP;
+
 public class ModRegistration {
     // Register items, blocks, etc here. Renderers, however, are to be registered in ClientEvents
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, RoboticSolutions.MODID);
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, RoboticSolutions.MODID);
     public static final RegistryObject<Item> MEMORY_JUICE_BUCKET = ITEMS.register("memory_juice_bucket",
-            () -> new BucketItem(() -> ModFluids.MEMORY_JUICE_FLUID.get(), new Item.Properties().maxStackSize(1)));
+            () -> new BucketItem(() -> ModFluids.MEMORY_JUICE_FLUID.get(), new Item.Properties().group(ROBOTIC_SOLUTIONS_GROUP).maxStackSize(1)));
 
 
     public static void init(IEventBus eventBus) {
