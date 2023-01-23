@@ -1,0 +1,6 @@
+{
+  "parent": "roboticsolutions:block/template_blackfire_up",
+  "textures": {
+    "blackfire": "roboticsolutions:block/blackfire_0"
+  }
+}

@@ -1,8 +1,10 @@
 package net.demoman.roboticsolutions.core;
 
 import net.demoman.roboticsolutions.RoboticSolutions;
+import net.demoman.roboticsolutions.core.block.BlackFireBlock;
 import net.demoman.roboticsolutions.core.fluid.ModFluids;
-import net.minecraft.block.Block;
+import net.minecraft.block.*;
+import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.fluid.FluidState;
@@ -17,6 +19,8 @@ import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
+import java.util.function.ToIntFunction;
+
 import static net.demoman.roboticsolutions.core.ModItemGroup.ROBOTIC_SOLUTIONS_GROUP;
 
 public class ModRegistration {
@@ -25,6 +29,9 @@ public class ModRegistration {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, RoboticSolutions.MODID);
     public static final RegistryObject<Item> MEMORY_JUICE_BUCKET = ITEMS.register("memory_juice_bucket",
             () -> new BucketItem(() -> ModFluids.MEMORY_JUICE_FLUID.get(), new Item.Properties().group(ROBOTIC_SOLUTIONS_GROUP).maxStackSize(1)));
+    public static final RegistryObject<Block> BLACKFIRE = BLOCKS.register("blackfire",
+            () -> new BlackFireBlock(AbstractBlock.Properties.create(Material.FIRE).doesNotBlockMovement().zeroHardnessAndResistance().noDrops().sound(SoundType.CLOTH).setLightLevel((state) -> {
+                return 10; })));
 
 
     public static void init(IEventBus eventBus) {

@@ -2,10 +2,9 @@ package net.demoman.roboticsolutions;
 
 import net.demoman.roboticsolutions.core.ModRegistration;
 import net.demoman.roboticsolutions.core.fluid.ModFluids;
-import net.demoman.roboticsolutions.events.ClientEvents;
-import net.demoman.roboticsolutions.events.ModEvents;
-import net.minecraft.client.renderer.RenderType;
-import net.minecraft.client.renderer.RenderTypeLookup;
+import net.demoman.roboticsolutions.core.events.ClientEvents;
+import net.demoman.roboticsolutions.core.events.ModEvents;
+import net.demoman.roboticsolutions.core.particle.ModParticles;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -31,6 +30,7 @@ public class RoboticSolutions
         ModRegistration.init(eventBus);
         ModEvents.setup(eventBus);
         ModFluids.register(eventBus);
+        ModParticles.register(eventBus);
 
         eventBus.addListener(ModEvents::init);
         DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> eventBus.addListener(ClientEvents::init));

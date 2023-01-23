@@ -1,0 +1,6 @@
+{
+  "parent": "roboticsolutions:block/template_blackfire_side_alt",
+  "textures": {
+    "blackfire": "roboticsolutions:block/blackfire_0"
+  }
+}

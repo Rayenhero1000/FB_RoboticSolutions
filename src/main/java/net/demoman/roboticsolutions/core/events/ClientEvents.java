@@ -1,19 +1,26 @@
-package net.demoman.roboticsolutions.events;
+package net.demoman.roboticsolutions.core.events;
 
 import net.demoman.roboticsolutions.RoboticSolutions;
+import net.demoman.roboticsolutions.core.ModRegistration;
 import net.demoman.roboticsolutions.core.fluid.ModFluids;
+import net.demoman.roboticsolutions.core.particle.ModParticles;
+import net.demoman.roboticsolutions.core.particle.custom.WhiteSmokeParticle;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.fluid.FluidState;
+import net.minecraft.particles.ParticleType;
 import net.minecraft.util.math.BlockPos;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityViewRenderEvent;
+import net.minecraftforge.client.event.ParticleFactoryRegisterEvent;
 import net.minecraftforge.client.event.RenderBlockOverlayEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
+
+import static net.demoman.roboticsolutions.core.particle.ModParticles.WHITE_SMOKE_PARTICLE;
 
 @Mod.EventBusSubscriber(modid = RoboticSolutions.MODID, value = Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class ClientEvents {
@@ -23,6 +30,8 @@ public class ClientEvents {
             RenderTypeLookup.setRenderLayer(ModFluids.MEMORY_JUICE_FLUID.get(), RenderType.getTranslucent());
             RenderTypeLookup.setRenderLayer(ModFluids.MEMORY_JUICE_BLOCK.get(), RenderType.getTranslucent());
             RenderTypeLookup.setRenderLayer(ModFluids.MEMORY_JUICE_FLOWING.get(), RenderType.getTranslucent());
+            RenderTypeLookup.setRenderLayer(ModRegistration.BLACKFIRE.get(), RenderType.getTranslucent());
+            RenderTypeLookup.setRenderLayer(ModRegistration.BLACKFIRE.get(), RenderType.getCutout());
         });
     }
     @SubscribeEvent
