@@ -2,7 +2,6 @@ package net.demoman.roboticsolutions.core;
 
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.text.ITextComponent;
 
 public class ModItemGroup {
 

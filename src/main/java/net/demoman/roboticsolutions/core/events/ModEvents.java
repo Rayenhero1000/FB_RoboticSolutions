@@ -1,10 +1,8 @@
 package net.demoman.roboticsolutions.core.events;
 
 import net.demoman.roboticsolutions.RoboticSolutions;
-import net.demoman.roboticsolutions.core.particle.ModParticles;
 import net.demoman.roboticsolutions.core.particle.custom.WhiteSmokeParticle;
 import net.minecraft.client.Minecraft;
-import net.minecraft.particles.ParticleType;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.ParticleFactoryRegisterEvent;
 import net.minecraftforge.eventbus.api.IEventBus;

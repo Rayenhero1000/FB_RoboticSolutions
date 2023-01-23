@@ -7,7 +7,6 @@ import net.demoman.roboticsolutions.core.particle.ModParticles;
 import net.minecraft.block.*;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.fluid.Fluids;
-import net.minecraft.particles.ParticleTypes;
 import net.minecraft.state.*;
 import net.minecraft.state.properties.BlockStateProperties;
 import net.minecraft.util.Direction;

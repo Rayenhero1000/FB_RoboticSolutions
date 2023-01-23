@@ -5,21 +5,12 @@ import net.demoman.roboticsolutions.core.block.BlackFireBlock;
 import net.demoman.roboticsolutions.core.fluid.ModFluids;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
-import net.minecraft.client.Minecraft;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.fluid.FluidState;
 import net.minecraft.item.BucketItem;
 import net.minecraft.item.Item;
-import net.minecraft.util.math.BlockPos;
-import net.minecraftforge.client.event.EntityViewRenderEvent;
-import net.minecraftforge.client.event.RenderBlockOverlayEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
-
-import java.util.function.ToIntFunction;
 
 import static net.demoman.roboticsolutions.core.ModItemGroup.ROBOTIC_SOLUTIONS_GROUP;
 
