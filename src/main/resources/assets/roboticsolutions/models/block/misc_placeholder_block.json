@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "roboticsolutions:block/misc_placeholder_block"
+  }
+}

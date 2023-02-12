@@ -28,7 +28,7 @@ import java.util.Random;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-import static net.demoman.roboticsolutions.core.ModRegistration.BLACKFIRE;
+import static net.demoman.roboticsolutions.core.BlockRegistration.BLACKFIRE;
 import static net.minecraft.block.CampfireBlock.*;
 
 public class BlackFireBlock extends AbstractFireBlock {

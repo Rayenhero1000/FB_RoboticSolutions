@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "roboticsolutions:block/memory_juice"
+    }
+  }
+}

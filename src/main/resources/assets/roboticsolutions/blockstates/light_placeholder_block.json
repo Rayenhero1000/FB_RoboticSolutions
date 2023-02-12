@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "roboticsolutions:block/light_placeholder_block"
+    }
+  }
+}

@@ -1,7 +1,8 @@
 package net.demoman.roboticsolutions.core.fluid;
 
 import net.demoman.roboticsolutions.RoboticSolutions;
-import net.demoman.roboticsolutions.core.ModRegistration;
+import net.demoman.roboticsolutions.core.BlockRegistration;
+import net.demoman.roboticsolutions.core.ItemRegistration;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.FlowingFluidBlock;
 import net.minecraft.block.material.Material;
@@ -37,9 +38,9 @@ public class ModFluids {
             () -> MEMORY_JUICE_FLUID.get(), () -> MEMORY_JUICE_FLOWING.get(), FluidAttributes.builder(WATER_STILL_RL, WATER_FLOWING_RL)
             .density(15).luminosity(2).gaseous().viscosity(5).sound(SoundEvents.ITEM_BUCKET_FILL, SoundEvents.ITEM_BUCKET_EMPTY).overlay(WATER_OVERLAY_RL)
                 .color(0xffff6550)).slopeFindDistance(2).levelDecreasePerBlock(2)
-            .block(() -> ModFluids.MEMORY_JUICE_BLOCK.get()).bucket(() -> ModRegistration.MEMORY_JUICE_BUCKET.get());
+            .block(() -> ModFluids.MEMORY_JUICE_BLOCK.get()).bucket(() -> ItemRegistration.MEMORY_JUICE_BUCKET.get());
 
-    public static final RegistryObject<FlowingFluidBlock> MEMORY_JUICE_BLOCK = ModRegistration.BLOCKS.register("memory_juice",
+    public static final RegistryObject<FlowingFluidBlock> MEMORY_JUICE_BLOCK = BlockRegistration.BLOCKS.register("memory_juice",
             () -> new FlowingFluidBlock(() -> ModFluids.MEMORY_JUICE_FLUID.get(), AbstractBlock.Properties.create(Material.WATER)
                     .doesNotBlockMovement().hardnessAndResistance(100f).noDrops()));
 

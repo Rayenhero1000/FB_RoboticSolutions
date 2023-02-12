@@ -2,5 +2,12 @@
   "item.roboticsolutions.memory_juice_bucket": "Memory Juice Bucket",
   "fluid.roboticsolutions.memory_juice": "Memory Juice",
   "itemGroup.roboticSolutionsTab": "Robotic Solutions",
-  "block.roboticsolutions.blackfire": "Blackfire"
+  "block.roboticsolutions.blackfire": "Blackfire",
+  "block.roboticsolutions.white_concrete_wall": "White Concrete Wall",
+  "block.roboticsolutions.dotted_gray_concrete_floor": "Dotted Gray Concrete Floor",
+  "block.roboticsolutions.black_door": "Black Door",
+  "block.roboticsolutions.misc_placeholder_block": "Misc Placeholder Block",
+  "block.roboticsolutions.light_placeholder_block": "Light Placeholder Block",
+  "block.roboticsolutions.teleport_block": "",
+  "block.roboticsolutions.level_minus_1_gen_block": "Level -1 Gen Block"
 }
